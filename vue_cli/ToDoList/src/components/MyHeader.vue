@@ -23,12 +23,11 @@ export default {
       // 定义对象
       const todoObj = { id: nanoid(), title: this.title, done: false }
       // 添加todo对象
-      this.addTodo(todoObj)
+      this.$emit('addTodo', todoObj)
       // 清空输入
       this.title = ''
     }
   },
-  props: ['addTodo']
 }
 </script>
 
